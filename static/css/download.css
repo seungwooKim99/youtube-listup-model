@@ -1,0 +1,18 @@
+body{
+  margin: 0;
+}
+
+.container{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #191F2C;
+  color: white;
+}
+
+a:link {
+  color:
+}

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang='ko'>
+  <head>
+    <meta charset="UTF-8">
+    <title>Youtube Listup Model</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/download.css')}}"">
+  </head>
+  <body>
+    <div class='container'>
+      <h2>Youtube Listup Model</h2>
+      <p style="font-weight: 300; font-size: medium;">
+        유튜브 채널에 올라온 동영상 정보를 엑셀로 리스트업 해보세요.<br>
+        영상의 제목, 업로드 날짜, 설명, 링크를 제공해 드립니다.
+      </p>
+      <p style="font-weight: 300; font-size: medium;">
+        유튜브 채널 주소창에서 채널id를 복사해서 아래 붙여넣기하세요.<br>
+        채널id를 확인하기 어렵다면 아래 서비스를 이용하세요.<br>
+        <a style="color: #BB4764; text-decoration: none;" href="https://www.ttmkt.com/kr/tools/youtube-rss-generator/">채널id 생성 서비스</a>
+      </p>
+      <div>
+        <form action='http://127.0.0.1:5000/api/makeexcel' method="POST">
+          <input type='text' name='channelId' placeholder="채널 id를 입력하세요">
+          <button type="submit">download</button>
+        </form>
+      </div>
+      <footer style="margin-top: 100px; font-size: smaller; font-weight: 200;">
+        2021 &copy Seungwoo Kim
+      </footer>
+    </div>
+  </body>
+</html>
