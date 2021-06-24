@@ -22,18 +22,6 @@ def result():
         return my_res
     return send_file(fileName, as_attachment=True)
 
-@app.route('/api/getresult', methods=['POST'])
-def download():
-    value = request.form['channelId']
-    result_pd = getExcel((str(value)))
-    print(type(result_pd))
-    print('ok')
-    
-    my_res = flask.Response('success!')
-    my_res.headers["Access-Control-Allow-Origin"] = "*"
-    
-    return my_res
-
 if __name__ == "__main__":
-    app.run(port="8000", debug=True)
+    app.run(host="0.0.0.0", port="80", debug=True)
     #app.run(debug=True, port="8000")
